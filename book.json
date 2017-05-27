@@ -32,9 +32,4 @@
 		"pageNumbers": false,
 		"paperSize": "a4"
 	},
-	// "plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "toggle-chapters"],
-	// "pluginsConfig": {
-	// 	"github": {"url": "https://github.com/django000/testbook"},
-	// 	"disqus": {"shortName": ""},
-	// }
 }
