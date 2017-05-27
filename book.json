@@ -30,5 +30,6 @@
 		},
 		"pageNumbers": false,
 		"paperSize": "a4"
-	}
+	},
+	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "toggle-chapters"]
 }
