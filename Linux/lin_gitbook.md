@@ -10,7 +10,7 @@
 	```
 2. 在"~/.profile"或"./bashrc"中添加如下命令
 
-`source ~/.nvm/nvm.sh`
+	`source ~/.nvm/nvm.sh`
 
 3. 在终端中`source ~/.profile` 或者`source ~/.bashrc`使更改生效，并使用`nvm --version`检查是否成功
 
