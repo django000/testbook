@@ -1,6 +1,4 @@
-<header><h2 align="center">Linux 调用动态链接库文件</h2></header>
-
-[TOC]
+<header><h2 align="center">Linux中调用动态链接库libtest.so</h2></header>
 
 ### 生成.so文件
 
