@@ -1,0 +1,40 @@
+{
+	"title": "Test Book",
+	"author": "Vito.Z <zhangwentao0601@163.com>",
+	"description": "读研期间积累的实战经验",
+	"extension": null,
+	"language": "zh-hans",
+	"generator": "site",
+	"isbn": null,
+	"links": {
+		"sharing": {
+			"all": null,
+			"facebook": null,
+			"google": null,
+			"twitter": null,
+			"weibo": null
+		},
+		"sidebar": {
+			"Vito.Z Home": "http://vitoz.xyz"
+		}
+	},
+	"output": null,
+	"pdf": {
+		"fontSize": 12,
+		"footerTemplate": null,
+		"headerTemplate": null,
+		"margin": {
+			"bottom": 36,
+			"left": 62,
+			"right": 62,
+			"top": 36
+		},
+		"pageNumbers": false,
+		"paperSize": "a4"
+	},
+	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "toggle-chapters"],
+	"pluginsConfig": {
+		"github": {"url": "https://github.com/django000/testbook"},
+		// "disqus": {"shortName": ""},
+	}
+}
