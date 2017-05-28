@@ -5,7 +5,7 @@
 1. 根据操作系统及位数从[官网](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)下载对应的Java SE安装包
 2. 双击安装，等待完成。
 
-*P.S. 将jdk和jre安装在同一级目录下*
+	*P.S. 将jdk和jre安装在同一级目录下*
 
 ### 配置Java的环境变量
 
@@ -26,7 +26,7 @@
 
 1. Sublime Text 3->Preference->Browse Packages，在打开的打开的窗口中双击User文件夹，新建文件*JavaC.sublime-build*，用Sublime 打开并粘贴如下内容
 
-	```
+	```json
 	{
 		"cmd": ["javac", "-encoding", "UTF-8", "-d", ".", "$file"],
 		"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
@@ -51,23 +51,22 @@
 
 2. 新建测试文件*Hello.java*，并输入如下内容
 
-```java
-import java.util.Scanner;
+	```java
+	import java.util.Scanner;
 
-
-public class Hello {
-	public static void main(String args[]) {
-		Scanner s = new Scanner(System.in);
-		System.out.println("输入字符串，exit终止====>");
-		while (s.hasNextLine()) {
-			String line = s.nextLine();
-			if (line.equals("exit"))
-				break;
-			System.out.println("out==>"+line);
+	public class Hello {
+		public static void main(String args[]) {
+			Scanner s = new Scanner(System.in);
+			System.out.println("输入字符串，exit终止====>");
+			while (s.hasNextLine()) {
+				String line = s.nextLine();
+				if (line.equals("exit"))
+					break;
+				System.out.println("out==>"+line);
+			}
 		}
 	}
-}
-```
+	```
 
 3. 快捷键"Ctrl+Shift+B"选择"JavaC"编译
 4. 快捷键"Ctrl+Shift+B"选择"JavaC - Run"运行，并检查是否成功
