@@ -31,8 +31,29 @@
 		"pageNumbers": false,
 		"paperSize": "a4"
 	},
-	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "toggle-chapters"],
+	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "expandable-chapters-small", "tbfed-pagefooter", "edit-link", "anchor-navigation-ex", "3-ba"],
 	"pluginsConfig": {
-		"github": {"url": "https://github.com/django000/testbook"}
+		"github": {"url": "https://github.com/django000/testbook"},
+		"tbfed-pagefooter": {
+			"copyright": "Copyright &copy <a href='http://vitoz.xyz'>vitoz.xyz</a> 2017",
+			"modify_label": "该文件最后修订时间：",
+			"modify_format": "YYYY-MM-DD HH:mm:ss"
+		},
+		"edit-link": {
+			"base": "https://github.com/django000/testbook/blob/master",
+			"label": "编辑本页"
+		},
+		"3-ba": {"token": "dffe2b5ccff2815817a6b6613f98fdc9"},
+		"anchor-navigation-ex": {
+			"showLevel": false,
+			"associatedWithSummary": false,
+			"mode": "float",
+			"float": {
+				"showLevelIcon": false,
+				"level1Icon": "fa fa-hand-o-right",
+				"level2Icon": "fa fa-hand-o-right",
+				"level3Icon": "fa fa-hand-o-right"
+			}
+		}
 	}
 }
