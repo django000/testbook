@@ -16,4 +16,5 @@
 	* [Python利用Flask搭建网站](Python/py_flask.md)
 * [面向对象面对JAVA](JAVA/README.md)
 	* [JAVA环境搭建](JAVA/java_mk.md)
+* [Google Search Console验证](google15d28197f92a9e64.md)
 
