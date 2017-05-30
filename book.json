@@ -31,17 +31,17 @@
 		"pageNumbers": false,
 		"paperSize": "a4"
 	},
-	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "expandable-chapters-small", "tbfed-pagefooter", "edit-link", "anchor-navigation-ex", "3-ba"],
+	"plugins": ["-search", "-lunr", "search-pro", "github", "splitter", "expandable-chapters-small", "tbfed-pagefooter", "edit-link", "anchor-navigation-ex", "3-ba", "disqus", "toggle-chapters", "ga"],
 	"pluginsConfig": {
 		"github": {"url": "https://github.com/django000/testbook"},
 		"tbfed-pagefooter": {
 			"copyright": "Copyright &copy <a href='http://vitoz.xyz'>vitoz.xyz</a> 2017",
-			"modify_label": "该文件最后修订时间：",
+			"modify_label": "Last Revised at ",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
 		},
 		"edit-link": {
 			"base": "https://github.com/django000/testbook/blob/master",
-			"label": "编辑本页"
+			"label": "Edit this Page"
 		},
 		"3-ba": {"token": "dffe2b5ccff2815817a6b6613f98fdc9"},
 		"anchor-navigation-ex": {
@@ -54,6 +54,8 @@
 				"level2Icon": "fa fa-hand-o-right",
 				"level3Icon": "fa fa-hand-o-right"
 			}
-		}
+		},
+		"disqus": {"shortName": "disqus-vitoz"},
+		"ga": {"token": "UA-100136889-1"}
 	}
 }
