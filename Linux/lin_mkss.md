@@ -52,7 +52,65 @@
 5. 设置ssserver的开机自启
 	以sudo权限编辑文件"/etc/rc.local"，在其末尾追加`ssserver -c /home/ec2-user/shadow/ssconfig.json -d start`
 
+### 优化Shadowsocks
+
+1. 编辑"/etc/sysctl.conf"文件，并在末尾追加下述内容来调整内核
+	```bash
+	fs.file-max = 51200
+	net.core.rmem_max = 67108864
+	net.core.wmem_max = 67108864
+	net.core.netdev_max_backlog = 250000
+	net.core.somaxconn = 4096
+	net.ipv4.tcp_syncookies = 1
+	net.ipv4.tcp_tw_reuse = 1
+	net.ipv4.tcp_tw_recycle = 0
+	net.ipv4.tcp_fin_timeout = 30
+	net.ipv4.tcp_keepalive_time = 1200
+	net.ipv4.ip_local_port_range = 10000 65000
+	net.ipv4.tcp_max_syn_backlog = 8192
+	net.ipv4.tcp_max_tw_buckets = 5000
+	net.ipv4.tcp_rmem = 4096 87380 67108864
+	net.ipv4.tcp_wmem = 4096 65536 67108864
+	net.ipv4.tcp_mtu_probing = 1
+	net.ipv4.tcp_congestion_control = hybla
+	```
+2. 编辑"/etc/security/limits.conf"文件，在文件末尾加入以下内容
+	```bash
+	* soft nofile 51200
+	* hard nofile 51200
+	```
+3. 编辑"/etc/pam.d/common-session"文件，在文件末尾加入`session required pam_limits.so`
+4. 编辑"/etc/profile"文件，在文件末尾加入`ulimit -SHn 51200`
+5. 重启系统，并用`ulimit -n`是否返回51200来检查是否成功
+
+### 安装锐速进一步提速
+
+1. 通过如下命令来安装锐速
+	```bash
+	wget -N --no-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master/serverspeeder-all.sh && bash serverspeeder-all.sh
+	```
+2. 在终端中执行`/serverspeeder/bin/serverSpeeder.sh start`，常见的其他命令还有
+	```bash
+	/serverspeeder/bin/serverSpeeder.sh restart # 重启
+	/serverspeeder/bin/serverSpeeder.sh stop # 停止
+	/serverspeeder/bin/serverSpeeder.sh start # 启动
+	download_dir/serverSpeederInstaller.sh uninstall # 卸载
+	service serverSpeeder status # 查看状态
+	vim /serverspeeder/etc/config # 编辑配置文件
+	```
+3. 在终端中执行`vim /serverspeeder/etc/config`来更改如下配置
+	```bash
+	advinacc="1"
+	maxmode="1"
+	rsc="1"
+	gso="1" #主要是针对Digitalocean，其他的VPS小伙伴就请自测啦
+	accppp="1" #开启VPN加速~
+	```
+4. 修改完后执行`/serverspeeder/bin/serverSpeeder.sh restart`/重启锐速
+5. 检查"/etc/rc.local"文件中是否包含Shadowsocks和serverSpeeder的启动项，如果没有需要添加
+	```bash
+	/serverspeeder/bin/serverSpeeder.sh start
+	```
 6. 从[shadowsocks](https://github.com/shadowsocks/shadowsocks/tree/master)的github主页下载相应的客户端，并根据EC2实例中的配置文件填写客户端的账号设置
-7. 享受畅通
 
 *在一年优惠之后可以终止该实例，也可以继续使用*
