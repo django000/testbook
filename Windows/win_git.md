@@ -50,7 +50,7 @@ git config --local # 仓库级，位于repo/.git/config
 	```bash
 	git remote -v # 查看已关联远程仓库，如果没有关联的远程仓库，执行`git remote add origin git@github.com:USERNAME/repo.git`
 	git fetch origin
-	git diff.tool <local-branch> origin/master
+	git difftool <local-branch> origin/master
 	git merge origin/master # 如果报错，则执行`git mergetool`
 	```
 
@@ -83,6 +83,7 @@ git config --local # 仓库级，位于repo/.git/config
 	git difftool <local-branch> origin/<remote-branch> # 查看更新内容
 	git merge origin/<remote-branch> # 尝试合并远程分支到当前分支
 	git mergetool # 非必须，如果报错，则执行`git mergetool`来解决冲突
+	```
 
 7. 删除本地仓库
 	```bash
