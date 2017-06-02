@@ -11,6 +11,7 @@
 * [Windows的滴滴点点](Windows/README.md)
 	* [Windows常用软件](Windows/win_collection.md)
 	* [Windows修改任务栏透明居中](Windows/win_taskbar.md)
+	* [Windows搭建Git环境](Windows/win_git.md)
 	* [Windows搭建GitBook环境](Windows/win_gitbook.md)
 * [人生苦短要用Python](Python/README.md)
 	* [Python利用Flask搭建网站](Python/py_flask.md)

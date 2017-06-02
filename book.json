@@ -36,7 +36,7 @@
 		"github": {"url": "https://github.com/django000/testbook"},
 		"tbfed-pagefooter": {
 			"copyright": "Copyright &copy <a href='http://vitoz.xyz'>vitoz.xyz</a> 2017",
-			"modify_label": "Last Revised at ",
+			"modify_label": "Last Modified at ",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
 		},
 		"edit-link": {
