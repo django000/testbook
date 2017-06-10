@@ -11,8 +11,8 @@
 		#server_name 127.0.0.1;
 		charset utf-8;
 
-		#index index.html
-		error_page 404 500 503 /index.htm;
+		index index.htm index.html
+		error_page 404 500 503 404.htm 404.html;
 
 		location / {
 			root /home/user/project;

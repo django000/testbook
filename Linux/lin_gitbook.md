@@ -8,11 +8,11 @@
 	cd ~
 	git clone https://github.com/creationix/nvm.git .nvm
 	```
-2. 在"~/.profile"或"./bashrc"中添加如下命令
+2. 在"~/.profile"或"./bash_profile"中添加如下命令
 
 	`source ~/.nvm/nvm.sh`
 
-3. 在终端中`source ~/.profile` 或者`source ~/.bashrc`使更改生效，并使用`nvm --version`检查是否成功
+3. 在终端中`source ~/.profile` 或者`source ~/.bash_profile`使更改生效，并使用`nvm --version`检查是否成功
 
 ### 安装node以及npm
 
