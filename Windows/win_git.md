@@ -94,3 +94,15 @@ git config --local # 仓库级，位于repo/.git/config
 	```
 	> 在执行push操作时，git会自动执行一次gc操作，不过只有loose object达到一定数量后才会真正调用，建议手动执行。
 
+8. 常用别名设置
+	```bash
+	git config --global alias.c 'commit -m'
+	git config --global alias.co 'checkout'
+	git config --global alias.cob 'checkout -b'
+	git config --global alias.br 'branch'
+	git config --global alias.m 'merge'
+	git config --global alias.a 'add .'
+	git config --global alias.s 'status'
+	```
+	接下来，在终端中执行`git -c "some sommitment"`就可以代替完整的`git commit -m “some comment”`了。
+
